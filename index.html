@@ -8,6 +8,20 @@
   </head>
   <body>
     <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module">
+      const isLocalDev = ['localhost', '127.0.0.1', '::1'].includes(location.hostname);
+
+      if (isLocalDev) {
+        import('/src/main.ts');
+      } else {
+        const stylesheet = document.createElement('link');
+        stylesheet.rel = 'stylesheet';
+        stylesheet.href = '/web-demo/assets/index-4S_T671Y.css';
+        document.head.appendChild(stylesheet);
+
+        const productionEntry = '/web-demo/assets/index-DEyCKqPX.js';
+        import(productionEntry);
+      }
+    </script>
   </body>
 </html>
