@@ -1,0 +1,15 @@
+node_modules
+dist
+.repo
+*.local
+*.log
+*.tsbuildinfo
+
+exports
+projects
+molten_salt_agent_workbench_pptx
+build_molten_salt_pptx.cjs
+create_molten_salt_workbench_ppt.py
+
+.DS_Store
+Thumbs.db

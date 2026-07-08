@@ -1,0 +1,40 @@
+import type { Candidate } from '../types';
+
+export const mockCandidates: Candidate[] = [
+  {
+    id: 'nitrate-calcium',
+    name: 'NaNO3-KNO3-Ca(NO3)2',
+    scenario: '中温储热 / 传热',
+    grade: 'A-',
+    melting: '较好',
+    availability: '较好',
+    costRisk: '中',
+    corrosionRisk: '较低',
+    maturity: '较高',
+    advice: '适合进入小试验证，重点关注 Ca(NO3)2 含水率与预干燥控制。',
+  },
+  {
+    id: 'solar-salt',
+    name: 'NaNO3-KNO3',
+    scenario: '成熟储热系统 / 工程对标',
+    grade: 'B+',
+    melting: '一般',
+    availability: '高',
+    costRisk: '中',
+    corrosionRisk: '低',
+    maturity: '高',
+    advice: '适合作为工程基准方案，但低温侧裕量不足，需评估凝固风险。',
+  },
+  {
+    id: 'chloride',
+    name: 'NaCl-KCl-MgCl2',
+    scenario: '更高温传热 / 储能探索',
+    grade: 'B',
+    melting: '较好',
+    availability: '中',
+    costRisk: '低',
+    corrosionRisk: '较高',
+    maturity: '中',
+    advice: '具备高温潜力，但腐蚀与水氧控制要求高，建议作为后续探索方向。',
+  },
+];
